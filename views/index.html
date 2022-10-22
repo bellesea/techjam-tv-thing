@@ -34,7 +34,9 @@
   </head>
   <body>
     <!-- <h1><a href="https://hackclub.com/jobs" target="_blank" style="background-color: #EC3750; padding: 3px 5px; color: white; border-radius: 5px; text-decoration: none;">Hack Club</a> @ TechJam</h1> -->
-    <p style="margin-bottom: 20px">Click on something, watch the TV display 👀</p>
+    <p style="margin-bottom: 20px">
+      Click on something, watch the TV display 👀
+    </p>
     <div id="emojis"></div>
     <div
       style="
@@ -44,31 +46,31 @@
         margin-top: 20px;
       "
     >
-    <div
-    class="color"
-    data-color="black"
-    style="background-color: black"
-  ></div>
-  <div
-    class="color"
-    data-color="#EC3750"
-    style="background-color: #EC3750"
-  ></div>
+      <div
+        class="color"
+        data-color="black"
+        style="background-color: black"
+      ></div>
+      <div
+        class="color"
+        data-color="#EC3750"
+        style="background-color: #ec3750"
+      ></div>
       <div
         class="color"
         data-color="#5C80A5"
-        style="background-color: #5C80A5"
+        style="background-color: #5c80a5"
       ></div>
-    <div
-      class="color"
-      data-color="#9EAB84"
-      style="background-color: #9EAB84"
-    ></div>
-    <div
-      class="color"
-      data-color="#455C29"
-      style="background-color: #455C29"
-    ></div>
+      <div
+        class="color"
+        data-color="#9EAB84"
+        style="background-color: #9eab84"
+      ></div>
+      <div
+        class="color"
+        data-color="#455C29"
+        style="background-color: #455c29"
+      ></div>
     </div>
 
     <!-- <form id="message">
@@ -90,15 +92,69 @@
         required
       />
     </form> -->
-    <p style="padding-top: 10px;">Ps. <a href="https://hackclub.com/jobs" target="_blank" style="background-color: #EC3750; padding: 3px 5px; color: white; border-radius: 5px; text-decoration: none;">Hack Club</a> is hiring! Learn more <a href="https://hackclub.com/jobs" target="_blank" style="background-color: #EC3750; padding: 3px 5px; color: white; border-radius: 5px; text-decoration: none;">here</a></p>
+    <p style="padding-top: 10px">
+      Ps.
+      <a
+        href="https://hackclub.com/jobs"
+        target="_blank"
+        style="
+          background-color: #ec3750;
+          padding: 3px 5px;
+          color: white;
+          border-radius: 5px;
+          text-decoration: none;
+        "
+        >Hack Club</a
+      >
+      is hiring! Learn more
+      <a
+        href="https://hackclub.com/jobs"
+        target="_blank"
+        style="
+          background-color: #ec3750;
+          padding: 3px 5px;
+          color: white;
+          border-radius: 5px;
+          text-decoration: none;
+        "
+        >here</a
+      >
+    </p>
 
     <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       const socket = io();
 
+      const custom = [
+        {
+          id: "techjam",
+          name: "techjam",
+          emojis: [
+            {
+              id: "techjam",
+              name: "techjam",
+              keywords: ["techjam"],
+              skins: [{ src: "https://cloud-a436qo1uf-hack-club-bot.vercel.app/0group_521.png" }],
+            },
+          ],
+        },
+        {
+          id: "hackclub",
+          name: "hackclub",
+          emojis: [
+            {
+              id: "hackclub",
+              name: "Hack Club",
+              keywords: ["hack club", "code"],
+              skins: [{ src: ".https://assets.hackclub.com/favicons/apple-touch-icon.png" }],
+            },
+          ],
+        },
+      ];
+
       const picker = new EmojiMart.Picker({
-        onEmojiSelect({ native: emoji }) {
+        onEmojiSelect({ native: emoji, custom: custom }) {
           socket.emit("emoji", emoji);
         },
       });
