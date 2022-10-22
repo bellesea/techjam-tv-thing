@@ -20,13 +20,35 @@
         color: #fafafa;
         transition: background-color 100ms ease-in-out;
       }
+
+      .box {
+    position: absolute;
+    bottom: 5vw;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 3vw;
+    width: 100vw;
+      }
+
+      .content {
+        display: block;
+        width: 100%;
+        transform: translateX(100%);
+        animation: move 10s linear infinite;
+      }
+
+      @keyframes move {
+  to { transform: translateX(-100%); }
+}
     </style>
   </head>
   <body>
-    <div style="display: flex; align-items: center; justify-content: center">
+    <div style="display: flex; align-items: center; justify-content: center; margin: 0 20px;">
       <img
         style="width: 25vw; border-radius: 2vw"
-        src="https://cloud-o1jmxy3ys-hack-club-bot.vercel.app/0qr-code__2_.png"
+        src="/qr"
       />
 
       <div
@@ -41,10 +63,15 @@
         <h2 style="font-weight: normal; font-size: 4vw; margin-bottom: -2vw">
           Welcome to
         </h2>
-        <h1 style="font-size: 13vw; -webkit-text-stroke: 0.2vw black">
-          ASSEMBLE
+        <h1 style="font-size: 12vw; -webkit-text-stroke: 0.2vw black">
+          HACK CLUB
         </h1>
       </div>
+    </div>
+    <div class="box">
+      <h2 class="content">
+        SCAN ME 📱 SCAN ME 📱 SCAN ME 📱 
+       </h2>
     </div>
 
     <div
@@ -65,11 +92,11 @@
     </div>
 
     <div style="position: absolute; top: 2vw; right: 2vw">
-      <h3 style="font-size: 2vw; font-weight: normal">
-        Wi-Fi: <strong>Hack Club</strong>
+      <h3 style="font-size: 3vw; font-weight: normal">
+       We're Hiring!
       </h3>
-      <h3 style="font-size: 2vw; font-weight: normal">
-        Password: <strong>dinosaurbbq</strong>
+      <h3 style="font-size: 3vw; font-weight: normal">
+        <strong>hack.af/jobs</strong>
       </h3>
     </div>
 

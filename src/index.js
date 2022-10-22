@@ -37,12 +37,16 @@ app.get("/", (req, res) => {
   res.sendFile("index.html", { root: "./views" });
 });
 
-app.get("/display", (req, res) => {
+app.get("/display-secret", (req, res) => {
   res.sendFile("display.html", { root: "./views" });
 });
 
-app.get("/admin", (req, res) => {
+app.get("/admin-secret", (req, res) => {
   res.sendFile("admin.html", { root: "./views" });
+});
+
+app.get("/qr", (req, res) => {
+  res.sendFile("qr-code.svg", { root: "./" });
 });
 
 server.listen(3000, () => {
