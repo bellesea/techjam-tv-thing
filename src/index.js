@@ -6,6 +6,11 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
 let color = "black";
 
 io.on("connection", (socket) => {
@@ -49,6 +54,6 @@ app.get("/qr", (req, res) => {
   res.sendFile("qr-code.svg", { root: "./" });
 });
 
-server.listen(3000, () => {
+server.listen(port || 3000, () => {
   console.log("listening on *:3000");
 });
