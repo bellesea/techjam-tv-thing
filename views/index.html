@@ -71,7 +71,7 @@
     ></div>
     </div>
 
-    <form id="message">
+    <!-- <form id="message">
       <input
         type="text"
         name="message"
@@ -86,10 +86,10 @@
           border: none;
           color: white;
         "
-        placeholder="Enter a message..."
+        placeholder="Enter a message and click return"
         required
       />
-    </form>
+    </form> -->
     <p style="padding-top: 10px;">Ps. <a href="https://hackclub.com/jobs" target="_blank" style="background-color: #EC3750; padding: 3px 5px; color: white; border-radius: 5px; text-decoration: none;">Hack Club</a> is hiring! Learn more <a href="https://hackclub.com/jobs" target="_blank" style="background-color: #EC3750; padding: 3px 5px; color: white; border-radius: 5px; text-decoration: none;">here</a></p>
 
     <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
@@ -118,11 +118,11 @@
         });
       }
 
-      document.getElementById("message").addEventListener("submit", (e) => {
-        e.preventDefault();
-        socket.emit("message", e.target.message.value.trim());
-        e.target.reset();
-      });
+      // document.getElementById("message").addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   socket.emit("message", e.target.message.value.trim());
+      //   e.target.reset();
+      // });
     </script>
   </body>
 </html>
