@@ -1,11 +1,9 @@
-# assemble tv thing
+# techjam tv thing
 
-code powering the lobby TV for [Assemble](https://assemble.hackclub.com).
+code powering the event stand TV for Tech Jam.
 
 ![](https://cloud-jmau183zw-hack-club-bot.vercel.app/0img_20220805_193418891.jpg)
-^ this is when it got hacked
-
-(don't have any better photos)
+^ demo from previous iteration of this at a different event, assemble
 
 ## how to run
 
